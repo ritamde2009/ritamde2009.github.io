@@ -81,21 +81,6 @@
       .hidden {
         display: none;
       }
-
-      .empty-box {
-        width: 410px;
-        height: 460px;
-        background-color: #222;
-        border-radius: 8px;
-        border: 1px solid #4da6ff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        color: #4da6ff;
-        font-size: 1.5rem;
-        font-weight: bold;
-        cursor: pointer;
-      }
     </style>
   </head>
 
@@ -110,9 +95,9 @@
 
     <div class="projects-grid">
 
-      <!-- First project with toggle functionality -->
+      <!-- Your iframe with toggle functionality -->
       <div class="project-wrapper">
-        <div class="project-box">
+        <div class="project-box" style="position: relative;">
           <iframe 
             src="https://academy.cs.cmu.edu/sharing/silverEagle694274/embed"
             title="Current Project"
@@ -120,7 +105,7 @@
             id="projectIframe"
           ></iframe>
 
-          <div class="empty-box hidden" id="emptyBox">
+          <div class="project-box hidden" id="emptyBox" style="position: absolute; top: 0; left: 0; cursor: pointer;">
             Coming Soon
           </div>
         </div>
@@ -131,53 +116,6 @@
 
       <!-- Six Coming Soon with descriptions -->
       <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
 
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
-
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
-
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
-
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
-
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
-
-    </div>
-
-    <script>
-      const iframe = document.getElementById('projectIframe');
-      const emptyBox = document.getElementById('emptyBox');
-
-      iframe.addEventListener('click', () => {
-        iframe.classList.add('hidden');
-        emptyBox.classList.remove('hidden');
-      });
-
-      emptyBox.addEventListener('click', () => {
-        emptyBox.classList.add('hidden');
-        iframe.classList.remove('hidden');
-      });
-    </script>
-
-  </body>
-</html>
 
 
