@@ -38,11 +38,36 @@
 
       .section h3 {
         color: #4da6ff;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+        text-align: center;
       }
 
-      .section p {
-        color: #cccccc;
+      /* Projects grid */
+      .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+      }
+
+      .project-box {
+        background-color: #222;
+        border: 1px solid #4da6ff;
+        border-radius: 8px;
+        padding: 15px;
+        color: #a9d1ff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 180px;
+        text-align: center;
+      }
+
+      .project-title {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+        color: #4da6ff;
       }
 
       iframe {
@@ -75,7 +100,41 @@
 
       <div class="section">
         <h3>Projects</h3>
-        <p>[List and describe your projects here]</p>
+        <div class="projects-grid">
+
+          <!-- Your current project -->
+          <div class="project-box">
+            <div class="project-title">Current Project</div>
+            <p>A description or link about your current project goes here.</p>
+          </div>
+
+          <!-- Coming Soon boxes -->
+          <div class="project-box">
+            <div class="project-title">Coming Soon</div>
+            <p>Stay tuned for more projects!</p>
+          </div>
+          <div class="project-box">
+            <div class="project-title">Coming Soon</div>
+            <p>Stay tuned for more projects!</p>
+          </div>
+          <div class="project-box">
+            <div class="project-title">Coming Soon</div>
+            <p>Stay tuned for more projects!</p>
+          </div>
+          <div class="project-box">
+            <div class="project-title">Coming Soon</div>
+            <p>Stay tuned for more projects!</p>
+          </div>
+          <div class="project-box">
+            <div class="project-title">Coming Soon</div>
+            <p>Stay tuned for more projects!</p>
+          </div>
+          <div class="project-box">
+            <div class="project-title">Coming Soon</div>
+            <p>Stay tuned for more projects!</p>
+          </div>
+
+        </div>
       </div>
 
       <div class="section">
@@ -96,3 +155,4 @@
 
   </body>
 </html>
+
