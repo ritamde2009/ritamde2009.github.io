@@ -6,48 +6,17 @@
         color: #4da6ff;
         font-family: Arial, sans-serif;
         margin: 0;
-        padding: 0;
+        padding: 40px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
       }
 
-      h1 {
-        text-align: center;
-        color: #4da6ff;
-        text-decoration: underline;
-        margin-top: 30px;
-      }
-
-      h2 {
-        text-align: center;
-        color: #4da6ff;
-        margin-top: 10px;
-        margin-bottom: 30px;
-      }
-
-      .container {
-        width: 80%;
-        margin: 0 auto;
-      }
-
-      .section {
-        background-color: #1a1a1a;
-        border: 1px solid #4da6ff;
-        border-radius: 8px;
-        padding: 20px;
-        margin-bottom: 20px;
-      }
-
-      .section h3 {
-        color: #4da6ff;
-        margin-bottom: 20px;
-        text-align: center;
-      }
-
-      /* Projects grid */
       .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
-        gap: 20px;
-        justify-items: center;
+        grid-template-columns: repeat(3, 410px);
+        grid-gap: 20px;
       }
 
       .project-box {
@@ -56,13 +25,13 @@
         background-color: #222;
         border: 1px solid #4da6ff;
         border-radius: 8px;
-        color: #a9d1ff;
+        color: #4da6ff;
+        font-size: 1.5rem;
+        font-weight: bold;
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 1.3rem;
-        font-weight: bold;
         user-select: none;
       }
 
@@ -73,67 +42,29 @@
         border: none;
         display: block;
       }
-
-      footer {
-        text-align: center;
-        color: #4da6ff;
-        margin: 40px 0 20px 0;
-      }
     </style>
   </head>
 
   <body>
-    <h1>Ritam's Portfolio</h1>
-    <h2>Code That Works. Design That Lasts.</h2>
+    <div class="projects-grid">
 
-    <div class="container">
-
-      <div class="section">
-        <h3>About Me</h3>
-        <p>[Write a short introduction about yourself here]</p>
+      <!-- Your original iframe project box -->
+      <div class="project-box">
+        <iframe 
+          src="https://academy.cs.cmu.edu/sharing/silverEagle694274/embed"
+          title="Current Project"
+          loading="lazy"
+        ></iframe>
       </div>
 
-      <div class="section">
-        <h3>Projects</h3>
-        <div class="projects-grid">
-
-          <!-- Current project iframe inside a project-box -->
-          <div class="project-box">
-            <iframe 
-              src="https://academy.cs.cmu.edu/sharing/silverEagle694274/embed"
-              title="Current Project"
-              loading="lazy"
-            ></iframe>
-          </div>
-
-          <!-- Six Coming Soon boxes -->
-          <div class="project-box">Coming Soon</div>
-          <div class="project-box">Coming Soon</div>
-          <div class="project-box">Coming Soon</div>
-          <div class="project-box">Coming Soon</div>
-          <div class="project-box">Coming Soon</div>
-          <div class="project-box">Coming Soon</div>
-
-        </div>
-      </div>
-
-      <div class="section">
-        <h3>Skills</h3>
-        <p>[List your programming languages, tools, and technologies here]</p>
-      </div>
-
-      <div class="section">
-        <h3>Contact</h3>
-        <p>[Add your email or other contact details here]</p>
-      </div>
+      <!-- Six Coming Soon boxes -->
+      <div class="project-box">Coming Soon</div>
+      <div class="project-box">Coming Soon</div>
+      <div class="project-box">Coming Soon</div>
+      <div class="project-box">Coming Soon</div>
+      <div class="project-box">Coming Soon</div>
+      <div class="project-box">Coming Soon</div>
 
     </div>
-
-    <footer>
-      &copy; 2025 Ritam's Portfolio
-    </footer>
-
   </body>
 </html>
-
-
