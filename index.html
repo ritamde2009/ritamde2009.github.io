@@ -80,7 +80,7 @@
     }
 
     .hidden {
-      display: none;
+      display: none !important; /* important to override anything else */
     }
 
     .overlay-box {
@@ -99,6 +99,9 @@
       top: 0;
       left: 0;
       cursor: pointer;
+      user-select: none;
+      /* Ensure it’s above iframe only when visible */
+      z-index: 10;
     }
   </style>
 </head>
@@ -164,21 +167,24 @@
   </div>
 
   <script>
-    const iframe = document.getElementById('projectIframe');
-    const emptyBox = document.getElementById('emptyBox');
+    document.addEventListener('DOMContentLoaded', () => {
+      const iframe = document.getElementById('projectIframe');
+      const emptyBox = document.getElementById('emptyBox');
 
-    iframe.addEventListener('click', () => {
-      iframe.classList.add('hidden');
-      emptyBox.classList.remove('hidden');
-    });
+      iframe.addEventListener('click', () => {
+        iframe.classList.add('hidden');
+        emptyBox.classList.remove('hidden');
+      });
 
-    emptyBox.addEventListener('click', () => {
-      emptyBox.classList.add('hidden');
-      iframe.classList.remove('hidden');
+      emptyBox.addEventListener('click', () => {
+        emptyBox.classList.add('hidden');
+        iframe.classList.remove('hidden');
+      });
     });
   </script>
 
 </body>
 </html>
+
 
 
