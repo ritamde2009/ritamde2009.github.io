@@ -16,11 +16,7 @@
       .projects-grid {
         display: grid;
         grid-template-columns: repeat(3, 410px);
-        grid-gap: 40px 20px; /* vertical gap bigger for descriptions */
-      }
-
-      .project-wrapper {
-        text-align: center;
+        grid-gap: 20px;
       }
 
       .project-box {
@@ -35,6 +31,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        text-align: center;
         user-select: none;
       }
 
@@ -45,56 +42,28 @@
         border: none;
         display: block;
       }
-
-      .description {
-        margin-top: 12px;
-        font-size: 1rem;
-        color: #77aaff;
-        user-select: text;
-      }
     </style>
   </head>
 
   <body>
     <div class="projects-grid">
 
-      <!-- Your iframe with description -->
-      <div class="project-wrapper">
-        <div class="project-box">
-          <iframe 
-            src="https://academy.cs.cmu.edu/sharing/silverEagle694274/embed"
-            title="Current Project"
-            loading="lazy"
-          ></iframe>
-        </div>
-        <div class="description">Insert description here</div>
+      <!-- Your original iframe project box -->
+      <div class="project-box">
+        <iframe 
+          src="https://academy.cs.cmu.edu/sharing/silverEagle694274/embed"
+          title="Current Project"
+          loading="lazy"
+        ></iframe>
       </div>
 
-      <!-- Six Coming Soon with descriptions -->
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
-      <div class="project-wrapper">
-        <div class="project-box">Coming Soon</div>
-        <div class="description">Insert description here</div>
-      </div>
+      <!-- Six Coming Soon boxes -->
+      <div class="project-box">Coming Soon</div>
+      <div class="project-box">Coming Soon</div>
+      <div class="project-box">Coming Soon</div>
+      <div class="project-box">Coming Soon</div>
+      <div class="project-box">Coming Soon</div>
+      <div class="project-box">Coming Soon</div>
 
     </div>
   </body>
