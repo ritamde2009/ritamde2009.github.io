@@ -47,29 +47,36 @@
       text-align: center;
     }
 
-    .project-box {
+    /* Scrollable container wrapping iframe + blank area */
+    .scroll-container {
       width: 410px;
       height: 460px;
-      background-color: #222;
       border: 1px solid #4da6ff;
       border-radius: 8px;
-      color: #4da6ff;
-      font-size: 1.5rem;
-      font-weight: bold;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-color: #222;
+      overflow-y: auto;
       user-select: none;
-      position: relative;
     }
 
     iframe {
       width: 410px;
       height: 460px;
-      border-radius: 8px;
       border: none;
+      border-radius: 8px 8px 0 0; /* Rounded top corners */
       display: block;
-      cursor: pointer;
+    }
+
+    /* The blank scroll area below iframe */
+    .extra-space {
+      height: 200px; /* Adjust height as needed */
+      background-color: #222;
+      color: #4da6ff;
+      font-size: 1rem;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+      text-align: center;
+      user-select: text;
     }
 
     .description {
@@ -79,29 +86,19 @@
       user-select: text;
     }
 
-    .hidden {
-      display: none !important; /* important to override anything else */
-    }
-
-    .overlay-box {
-      width: 410px;
-      height: 460px;
+    .project-box {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: #4da6ff;
       background-color: #222;
       border: 1px solid #4da6ff;
       border-radius: 8px;
-      color: #4da6ff;
-      font-size: 1.5rem;
-      font-weight: bold;
       display: flex;
       justify-content: center;
       align-items: center;
-      position: absolute;
-      top: 0;
-      left: 0;
-      cursor: pointer;
       user-select: none;
-      /* Ensure it’s above iframe only when visible */
-      z-index: 10;
+      width: 410px;
+      height: 460px;
     }
   </style>
 </head>
@@ -117,23 +114,25 @@
 
   <div class="projects-grid">
 
-    <!-- Your iframe project with toggle -->
+    <!-- First project with scroll container -->
     <div class="project-wrapper">
-      <div class="project-box">
+      <div class="scroll-container">
         <iframe 
           src="https://academy.cs.cmu.edu/sharing/silverEagle694274/embed"
           title="Current Project"
           loading="lazy"
-          id="projectIframe"
         ></iframe>
-        <div class="overlay-box hidden" id="emptyBox">Coming Soon</div>
+        <div class="extra-space">
+          <!-- Blank area for future info -->
+          <!-- You can put content here later -->
+        </div>
       </div>
       <div class="description">
         In this project, I used the code that I learned in class for shapes, colors, borders, gradients, and more to create a visual that shares 4 of 17 global goals of the UN.
       </div>
     </div>
 
-    <!-- Six Coming Soon projects -->
+    <!-- Six Coming Soon boxes with descriptions -->
     <div class="project-wrapper">
       <div class="project-box">Coming Soon</div>
       <div class="description">Insert description here</div>
@@ -166,25 +165,9 @@
 
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const iframe = document.getElementById('projectIframe');
-      const emptyBox = document.getElementById('emptyBox');
-
-      iframe.addEventListener('click', () => {
-        iframe.classList.add('hidden');
-        emptyBox.classList.remove('hidden');
-      });
-
-      emptyBox.addEventListener('click', () => {
-        emptyBox.classList.add('hidden');
-        iframe.classList.remove('hidden');
-      });
-    });
-  </script>
-
 </body>
 </html>
+
 
 
 
