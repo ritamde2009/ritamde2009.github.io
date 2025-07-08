@@ -31,9 +31,15 @@
       text-align: center;
       color: #a9d1ff;
       margin-top: 20px;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       line-height: 1.5;
       font-size: 1.1rem;
+    }
+
+    .scroll-note {
+      color: #a9d1ff;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
     .projects-grid {
@@ -110,14 +116,13 @@
     I'm an upcoming junior at LHS, and this is my portfolio for CS honors for summer school. I also enjoy tennis and spending time with friends & family.
   </div>
 
-  <div style="color: #a9d1ff; text-align: center; margin-bottom: 30px;">
-  You can scroll down on the project boxes to view some of the code and additional details.
-</div>
-
+  <div class="scroll-note">
+    You can scroll down on the project boxes to view some of the code and additional details.
+  </div>
 
   <div class="projects-grid">
 
-    <!-- First project with scroll container -->
+    <!-- Project 1 -->
     <div class="project-wrapper">
       <div class="scroll-container">
         <iframe 
@@ -126,7 +131,7 @@
           loading="lazy"
         ></iframe>
         <div class="extra-space">
-          <pre style="text-align: left; color: #a9d1ff; background-color: #111; padding: 10px; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;">
+<pre style="text-align: left; color: #a9d1ff; background-color: #111; padding: 10px; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;">
 Rect(0,200,200,200, fill='darkSeaGreen')
 Line(0,200,400,200, fill='black')
 Line(200,0,200,400,fill='black')
@@ -139,13 +144,9 @@ Line(90,288,28,228, fill='black', lineWidth=1)
 Polygon(92,324,109,306,140,295,141,313,121,328,92,324, fill='darkGreen')
 Line(92,324,140,295, fill='black', lineWidth=1)
 Line(0,360,200,360, fill='brown', lineWidth=10)
-          </pre>
-
+</pre>
           <div style="margin-top: 15px; color: #4da6ff; font-size: 1rem;">
-            The rectangle and lines at the beginning are part of the background, with the green rectangle creating the bottom-left quadrant of the design, and the lines creating the outline for each quadrant.
-            The label creates the text at the top. 
-            The oval lines create clouds, and the polygon lines create the shape of the leaves. 
-            The line created on line 7 creates the stem, and the last 2 lines create lines making the black lines across the leaves.
+            Insert text here
           </div>
         </div>
       </div>
@@ -154,12 +155,29 @@ Line(0,360,200,360, fill='brown', lineWidth=10)
       </div>
     </div>
 
-    <!-- Six Coming Soon boxes with descriptions -->
+    <!-- Project 2 (new one you added) -->
     <div class="project-wrapper">
-      <div class="project-box">Coming Soon</div>
-      <div class="description">Insert description here</div>
+      <div class="scroll-container">
+        <iframe 
+          src="https://academy.cs.cmu.edu/sharing/mintCreamTurtle187297/embed"
+          title="Second Project"
+          loading="lazy"
+        ></iframe>
+        <div class="extra-space">
+<pre style="text-align: left; color: #a9d1ff; background-color: #111; padding: 10px; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;">
+Insert your code snippet here
+</pre>
+          <div style="margin-top: 15px; color: #4da6ff; font-size: 1rem;">
+            Insert text here
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        Insert short summary of this project here
+      </div>
     </div>
 
+    <!-- Remaining Coming Soon Projects -->
     <div class="project-wrapper">
       <div class="project-box">Coming Soon</div>
       <div class="description">Insert description here</div>
