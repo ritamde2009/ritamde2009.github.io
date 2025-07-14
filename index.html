@@ -155,7 +155,7 @@ Line(0,360,200,360, fill='brown', lineWidth=10)
       </div>
     </div>
 
-    <!-- Project 2 (fixed) -->
+    <!-- Project 2 -->
     <div class="project-wrapper">
       <div class="scroll-container">
         <iframe 
@@ -171,15 +171,72 @@ def FirstLogo(x,y, color, forGradient, text):
     Label(text, x,y, fill=color, size=10, bold=True, font='orbitron')
 
 FirstLogo(200, 338, 'black', 'yellow', ' Call 866-348-6479: Emergency Food Providers')
-FirstLogo(250,338,'black','white', 'Dial 211 to find food agencies nearby')
 </pre>
           <div style="margin-top: 15px; color: #4da6ff; font-size: 1rem;">
-            This part of the code is a function. This code creates our first logo, which is a gradiented box with an outline, with text inside. There are 4 parameters, including x and y, which determines its position, color, which controls the text color, forGradient, which controls one color of the box gradient, and text, which controls the text in the box. The first line out of the function calls the function, where using the argument it creates the text and box at 200, 338, with black text, yellow in the gradient, and text saying "Call 866-348-6479: Emergency Food Providers." The second line calls the function again, but with different parameters. This second call line is from later in the code, when the page number is 2. The first call function occurs on the first slide.
+            This part of the code is a function. This code creates our first logo, which is a gradiented box with an outline, with text inside. There are 4 parameters, including x and y, which determines its position, color, which controls the text color, forGradient, which controls one color of the box gradient, and text, which controls the text in the box. The line out of the function calls the function, where using the argument it creates the text and box at 200, 338, with black text, yellow in the gradient, and text saying "Call 866-348-6479: Emergency Food Providers."
           </div>
         </div>
       </div>
       <div class="description">
         Title: Fighting World Hunger. In this project, I focused on the "Zero Hunger" global goal of the UN, and created informational slides explaining details about world hunger and ways to fight it. I used variables, functions, on release/pressed functions, and more in this project, which I learned in class this unit.
+      </div>
+    </div>
+
+    <!-- Project 3 (new) -->
+    <div class="project-wrapper">
+      <div class="scroll-container">
+        <iframe 
+          src="https://academy.cs.cmu.edu/sharing/slateBlueSeal934255/embed"
+          title="Third Project"
+          loading="lazy"
+        ></iframe>
+        <div class="extra-space">
+<pre style="text-align: left; color: #a9d1ff; background-color: #111; padding: 10px; border-radius: 6px; font-size: 0.78rem; overflow-x: auto;">
+def gameisOver(money, upgrades):
+    if (dollar.value >=10000):
+        Rect(0,0,400,400,fill='lightCyan')
+        Rect(40, 40, 320, 320, fill='white', border='black', dashes=True)
+        Label('Congrats, you won!', 200,88, fill='black', font='monospace',size=20, bold=True)
+        Label('You earned:', 200,120,size=15,font='orbitron')
+        Label('$', 170,150,size=15,font='orbitron')
+        Label(dollar.value, 210,150,size=15,font='orbitron')
+        Label('You saved:', 200, 180, size=15,font='orbitron')
+        Label(dollar.value/10,160,210,size=15,font='orbitron')
+        Label('people!',230,210,size=15,font='orbitron')
+        Circle(200,255,30,fill='gold')
+        Circle(170,265,10,fill=None,border='gold')
+        Circle(230,265,10,fill=None,border='gold')
+        Rect(137,222,93,28,fill='white')
+        Line(200,320,200,278,fill='gold',lineWidth=3)
+        Rect(185,320,30,13,fill='gold')
+        Label('Restaurant Upgrades:', 200,18)
+        Label(upgrades, 270,18)
+        app.stop()
+    else:
+        if (upgrades >=3) and (dollar.value <= 10000):
+            Label('(Fully Maxed)', 200,320)
+
+def onMousePress(mouseX, mouseY):
+    if (mouseX > 155) and (mouseX < 250) and (mouseY > 170) and(mouseY < 240) and (app.background == 'lightCyan'):
+        increaseMoney(5, 0)
+        gameisOver(dollar,0)
+    elif (mouseX > 155) and (mouseX < 250) and (mouseY > 170) and(mouseY < 240) and (app.background == 'red'):
+        increaseMoney(10, 1)
+        gameisOver(dollar,1)
+    elif (mouseX > 155) and (mouseX < 250) and (mouseY > 170) and(mouseY < 240) and (app.background == 'green'):
+        increaseMoney(50, 2)
+        gameisOver(dollar,2)
+    elif (mouseX > 155) and (mouseX < 250) and (mouseY > 170) and(mouseY < 240) and (app.background == 'blue'):
+        increaseMoney(200, 3)
+        gameisOver(dollar,3)
+</pre>
+          <div style="margin-top: 15px; color: #4da6ff; font-size: 1rem;">
+            Insert your description of this project here. You can explain what the win conditions are, how the upgrades work, and what the player does.
+          </div>
+        </div>
+      </div>
+      <div class="description">
+        Title: [Insert Title]. This project simulates a resource management game where the player earns money and saves lives through upgrades. Fully functional with if-statements, math, user interaction, and game-ending logic.
       </div>
     </div>
 
@@ -204,13 +261,9 @@ FirstLogo(250,338,'black','white', 'Dial 211 to find food agencies nearby')
       <div class="description">Insert description here</div>
     </div>
 
-    <div class="project-wrapper">
-      <div class="project-box">Coming Soon</div>
-      <div class="description">Insert description here</div>
-    </div>
-
   </div>
 
 </body>
 </html>
+
 
