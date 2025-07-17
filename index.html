@@ -249,15 +249,39 @@ def onMousePress(mouseX, mouseY):
         ></iframe>
         <div class="extra-space">
 <pre style="text-align: left; color: #a9d1ff; background-color: #111; padding: 10px; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;">
-# Insert your code here for the new project if you want it included
+def onKeyPress(key):
+    if (app.background == 'lightYellow') and ((key == 'C') or (key == 'c')):
+        q2()
+        R1.fill = 'green'
+        correct.value +=1
+        print(correct.value)
+    elif (app.background == 'lightYellow') and ((key == 'B') or (key == 'b')  or (key=='A') or (key=='a') or (key=='D') or (key=='d')):
+        q2()
+        R1.fill = 'grey'
+    if (app.background == 'moccasin') and ((key == 'C') or (key == 'c')):
+        q4()
+        R3.fill = 'green'
+        correct.value +=1
+        print(correct.value)
+    elif (app.background == 'moccasin') and ((key == 'A') or (key == 'a')  or (key=='B') or (key=='b') or (key=='D') or (key=='d')):
+        q4()
+        R3.fill = 'grey'
+    if (app.background == 'papayaWhip') and ((key == 'B') or (key == 'b')):
+        q6()
+        R5.fill = 'green'
+        correct.value +=1
+        print(correct.value)
+    elif (app.background == 'papayaWhip') and ((key == 'A') or (key == 'a')  or (key=='C') or (key=='c') or (key=='D') or (key=='d')):
+        q6()
+        R5.fill = 'grey'
 </pre>
           <div style="margin-top: 15px; color: #4da6ff; font-size: 1rem;">
-            Insert your description for the fourth project here. Describe what the project does, what concepts you used (like if-statements, loops, functions, etc.), and how it relates to the theme of the unit.
+            This coded is mostly mine, and it is a KeyPress function with a key parameter. It makes it so on slide 1, 3, and 5 you can type a,b,c,d (or capitals) to submit an answer. Whenever you type a key the code checks which slide you are on depending on the background color, and which key you pressed. Depending on the slide, if either the incorrect or correct the if-statement is true it will take you to the next slide, and if it you typed the correct letter it will add 1 to our correct variable, which determines how much money you saved at the end of the project.
           </div>
         </div>
       </div>
       <div class="description">
-        Title: [Insert Title]. This is where your summary/overview for the fourth project goes.
+        Title: Saving Energy. Answer questions in different formats such as clicking and typing letter corresponding to answers, and if you answer right a green bar will appear on the side. Otherwise, a grey bar will appear. Get as many right as possible to save the most possible money. This project is made with contains,hits,onKeyPress, and other types of functions I learned in this unit in order to share ways to save energy and promote the energy conservation UN global goal.
       </div>
     </div>
 
