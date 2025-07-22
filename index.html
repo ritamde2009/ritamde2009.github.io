@@ -280,20 +280,94 @@ def onKeyPress(key):
           </div>
         </div>
       </div>
-      <div class="description">
-        Title: Fighting Hunger. Answer questions in different formats such as clicking and typing letter corresponding to answers, and if you answer right a green bar will appear on the side. Otherwise, a grey bar will appear. Get as many right as possible to save the most possible money. This project is made with contains,hits,onKeyPress, and other types of functions I learned in this unit in order to share ways to save energy and promote the energy conservation UN global goal.
-      </div>
-    </div>
-      <div class="project">
-        <div class="iframe-scroll">
+<div class="project-wrapper">
+  <div class="project-box">
     <iframe width="410" height="460"
       src="https://academy.cs.cmu.edu/sharing/mistyRoseKangaroo946339/embed"> 
     </iframe>
+    <div style="max-height: 500px; overflow-y: auto; border: 2px solid #ccc; padding: 5px; margin: 10px auto 30px; width: 420px;">
+      <pre style="background-color: #1e1e1e; color: #00aaff; padding: 10px; font-family: monospace; font-size: 14px; overflow-x: auto; border-radius: 5px;">
+def gameisOver(win):
+    Rect(0,0,400,400,fill='lightCyan')
+    Rect(50,50,300,300,fill='white')
+    if (win == True) and (score.value == 3) or (score.value == 4):
+        Label('You Win!',200,85,size=18,bold=True)
+        Label('You won with',165,136,size=18,bold=True)
+        Label(score.value,245,136,size=18,bold=True)
+        Label('food baskets and saved',190,176,size=18,bold=True)
+        Label(score.value * 10,105,216,size=18,bold=True)
+        Label('people from hunger!',215,216,size=18,bold=True)
+        trophy1 = Group(
+            Circle(200,255,30,fill='gold'),
+            Circle(170,265,10,fill=None,border='gold'),
+            Circle(230,265,10,fill=None,border='gold'),
+            Rect(137,222,93,28,fill='white'),
+            Line(200,320,200,278,fill='gold',lineWidth=3),
+            Rect(185,320,30,13,fill='gold')
+        )
+        Label('people from hunger!',215,216,size=18,bold=True)
+        trophy1.height -= 10
+        app.stop()
+    elif (win == True) and (score.value <= 2):
+        Label('You Win!',200,85,size=18,bold=True)
+        Label('You won with',165,136,size=18,bold=True)
+        Label(score.value,245,136,size=18,bold=True)
+        Label('food baskets',190,176,size=18,bold=True)
+        trophy2 = Group(
+            Circle(200,255,30,fill='gold'),
+            Circle(170,265,10,fill=None,border='gold'),
+            Circle(230,265,10,fill=None,border='gold'),
+            Rect(137,222,93,28,fill='white'),
+            Line(200,320,200,278,fill='gold',lineWidth=3),
+            Rect(185,320,30,13,fill='gold')
+        )
+        Label('but could have saved more!',200,216,size=18,bold=True)
+        trophy2.height -= 10
+        app.stop()
+    elif (win == True) and (score.value == 5):
+        Label('You Win!',200,85,size=18,bold=True)
+        Label('You won with',165,136,size=18,bold=True)
+        Label(score.value,245,136,size=18,bold=True)
+        Label('food baskets.',190,176,size=18,bold=True)
+        trophy3 = Group(
+            Circle(200,255,30,fill='gold'),
+            Circle(170,265,10,fill=None,border='gold'),
+            Circle(230,265,10,fill=None,border='gold'),
+            Rect(137,222,93,28,fill='white'),
+            Line(200,320,200,278,fill='gold',lineWidth=3),
+            Rect(185,320,30,13,fill='gold')
+        )
+        Label('You saved everybody!',195,216,size=18,bold=True)
+        trophy3.height -= 10
+        app.stop()
+    elif not(win==True):
+        Label('You Suck!',200,85,size=18,bold=True)
+        Label('You lost with',165,136,size=18,bold=True)
+        Label(0,245,136,size=18,bold=True)
+        Label('food baskets and saved',190,176,size=18,bold=True)
+        Label(0,105,216,size=18,bold=True)
+        trophy4 = Group(
+            Circle(200,255,30,fill='gold'),
+            Circle(170,265,10,fill=None,border='gold'),
+            Circle(230,265,10,fill=None,border='gold'),
+            Rect(137,222,93,28,fill='white'),
+            Line(200,320,200,278,fill='gold',lineWidth=3),
+            Rect(185,320,30,13,fill='gold')
+        )
+        Line(147,239,264,337,lineWidth=4)
+        Line(257,239,145,337,lineWidth=4)
+        Label('people from hunger!',215,216,size=18,bold=True)
+        app.stop()
+      </pre>
+      <div style="margin-top: 15px; color: #4da6ff; font-size: 1rem;">
+        This is my custom function, which creates the endscreens depending on your outcome. Depending on how many food baskets you collected, the winscreen changes. If you lost the game too many times, you get the lose screen. The function is called two times, once with the "win" parameter set to true when you cross the finish line, and once with "win" set to false when you die 15 times. The conditions in the code (and,or,not) check your score in foodbaskets and whether win is true, and creates the winscreen accordingly.
+      </div>
     </div>
-  <pre class="code-block">
-    <!-- Your code goes here -->
-  </pre>
-  <p class="description">Title: Fighting Hunger. In this project, you click on the splashscreen after reading the instructions to play a game. You must collect as many food baskets as possible and head to the finish line. The more food baskets you win with, the more people you save. This projects goal is to share the zero hunger UN global goal. In this project I used many things I learned in this unit in class such as compound conditionals, onKeyHold, and more.</p>
+  </div>
+  <div class="description">
+    Title: Fighting Hunger. In this project, you click on the splashscreen after reading the instructions to play a game. You must collect as many food baskets as possible and head to the finish line. The more food baskets you win with, the more people you save. This projects goal is to share the zero hunger UN global goal. In this project I used many things I learned in this unit in class such as compound conditionals, onKeyHold, and more.</p> 
+  </div>
+  </div>
 </div>
 
     <!-- Remaining Coming Soon Projects -->
