@@ -368,9 +368,14 @@ def gameisOver(win):
         )
         Label('people from hunger!',215,216,size=18,bold=True)
         app.stop()
+  if(tries.value >= 15):
+      gameisOver(False)
+  if (finish.hitsShape(car)):
+      gameisOver(True)
+      motivation.visible = False
 </pre>
           <div style="margin-top: 15px; color: #4da6ff; font-size: 1rem;">
-            This is my custom function, which creates the endscreens depending on your outcome. Depending on how many food baskets you collected, the winscreen changes. If you lost the game too many times, you get the lose screen. The function is called two times, once with the "win" parameter set to true when you cross the finish line, and once with "win" set to false when you die 15 times. The conditions in the code (and,or,not) check your score in foodbaskets and whether win is true, and creates the winscreen accordingly.
+            This is my custom function, which creates the endscreens depending on your outcome. Depending on how many food baskets you collected, the winscreen changes. If you lost the game too many times, you get the lose screen. The function is called two times, once with the "win" parameter set to true when you cross the finish line, and once with "win" set to false when you die 15 times. The conditions in the code (and,or,not) check your score in foodbaskets and whether win is true, and creates the winscreen accordingly. It is called when you use too many tries, and sets the win parameter to false so it shows the lose screen. It calls it again when you reach the finish line, and sets win to true so you get the win screen.
           </div>
         </div>
       </div>
