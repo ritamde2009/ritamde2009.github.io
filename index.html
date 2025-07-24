@@ -384,6 +384,68 @@ def gameisOver(win):
         Title: Fighting Hunger. In this project, you click on the splashscreen after reading the instructions to play a game. You must collect as many food baskets as possible and head to the finish line. The more food baskets you win with, the more people you save. This project's goal is to share the Zero Hunger UN global goal. In this project I used many things I learned in this unit in class such as compound conditionals, onKeyHold, and more.
       </div>
     </div>
+<div class="project-wrapper">
+  <div class="scroll-container">
+    <iframe width="410" height="460"
+      src="https://academy.cs.cmu.edu/sharing/cadetBlueFrog487570/embed"> 
+    </iframe>
+    <div class="extra-space">
+<pre><code>
+def game2Finish(win):
+    if  (win == True) and (app.background == 'lightSalmon'):
+        Rect(0,0,400,400,fill='lemonChiffon')
+        Rect(25,25,350,350,fill='white')
+        Circle(200,255,33,fill='gold')
+        Circle(170,265,10,fill=None,border='gold')
+        Circle(230,265,10,fill=None,border='gold')
+        Rect(136,200,129,55,fill='white')
+        Line(200,320,200,278,fill='gold',lineWidth=3)
+        Rect(185,320,30,13,fill='gold')
+        Label('You Win!',200,140,size=20,bold=True)
+        Label('You saved 10 people from hunger!', 200,180,size=18,bold=True)
+        app.stop()
+    elif (win == False) and (app.background == 'lightSalmon'):
+        Rect(0,0,400,400,fill='lightCoral')
+        Rect(25,25,350,350,fill='white')
+        Circle(200,255,33,fill='gold')
+        Circle(170,265,10,fill=None,border='gold')
+        Circle(230,265,10,fill=None,border='gold')
+        Rect(136,200,129,55,fill='white')
+        Line(200,320,200,278,fill='gold',lineWidth=3)
+        Rect(185,320,30,13,fill='gold')
+        Label('You Lose!',200,110,size=20,bold=True)
+        Label('You fell and dropped', 150,140,size=18,bold=True)
+        Label(score2.value, 270,140,size=18,bold=True)
+        Label('apple(s), which couldve fed', 200,165,size=18,bold=True)
+        Label(score2.value, 155,190,size=18,bold=True)
+        Label('people/person', 240,190,size=18,bold=True)
+        Label('(And you couldve collected', 115,230,bold=True)
+        Label(10 - score2.value, 210,230,bold=True)
+        Label('more apples!)', 270,230,bold=True)
+        app.stop()
+
+def onStep():
+    food.centerY += food.speed
+    if (food.top >= 400) and (app.background == 'lightSalmon'):
+        game2Finish(False)
+    if (food.hitsShape(player2)) and (app.background == 'lightSalmon'):
+        score2.value += 1
+        food.bottom = 0
+        food.centerX = random.randint(10,390)
+        food.speed += 0.5
+    if(score2.value >= 10) and (app.background == 'lightSalmon'):
+        game2Finish(True)
+</code></pre>
+      <p class="code-description">
+        This is my custom gameover function, which is called when in game2's onStep function, you either drop an apple and the win parameter is set to false or collect 10 apples and the win parameter is set to true. If you win the function creates the winscreen, and if you lose the function creates the lose screen with custom dialog depending on your stats. The if and elif statements check whether win is true, and if the background is light salmon (light salmon means that game two is happening).
+      </p>
+    </div>
+  </div>
+  <div class="project-box">Zero Hunger Final</div>
+  <div class="description">
+    In this final project, I created an app with multiple ways to share the UN global goal of zero hunger. When you start the game there is a splash screen, which has 3 buttons to take you to 3 different ways to learn about zero hunger. The stat button brings up statistics about hunger, and you can randomize which statistic shows up. There is also a game1 and game2 button on the splash screen, which allow you to play games where you fight hunger, including a maze and a catcher game. I made the catcher game, where you have to catch 10 apples and not drop any to lose, and my partner made the maze game. I used onStep() functions in this project, which I learned in class this unit, and much more that I learned earlier in the class.
+  </div>
+</div>
 
   </div>
 
